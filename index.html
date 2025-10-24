@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página Inteligente en Flask</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        h2 {
+            color: #16a085;
+        }
+        form input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        form button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #2980b9;
+        }
+        .mensaje {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+
+    <form method="POST">
+        <input type="text" name="nombre" placeholder="Escribe tu nombre">
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if nombre %}
+        <h1>{{ saludo }}, {{ nombre }}!</h1>
+        <h2>Bienvenido a la página más inteligente hecha en Flask 😎</h2>
+    {% endif %}
+
+    <div class="mensaje">{{ mensaje }}</div>
+
+</body>
+</html>
